@@ -22,8 +22,8 @@ function requestListener( req, res ) {
       res.setHeader( 'Content-Type', 'text/html' );
       res.write( "something went wrong with reading this path" );
       res.end();
-      logConsole( 0, "error reading");
-      throw err;
+      logConsole( 0, "error reading " + url );
+      //throw err; don't want the server to die
     } else {
       // everything is alright
       var dotoffset = req.url.lastIndexOf( '.' );
