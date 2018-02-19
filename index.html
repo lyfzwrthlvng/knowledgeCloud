@@ -51,17 +51,17 @@
 
         <!-- Add your site or application content here -->
       <main class="cl_main">
-         <div class="cl_div_input" ng-submit="submitSearch()">
-            <input class="cl_input_search" id="input_search"/>
-            <button class="cl_input_search" id="input_submit_search" ng-click="submitSearch()">search</button>
-         </div>
+         <form class="cl_div_input" ng-submit="submitSearch()">
+            <input class="cl_input_search" id="input_search" ng-model="search_string"/>
+            <input type="submit" class="cl_input_search" id="input_submit_search" />
+         </form>
          <div class="cl_div_button">
 			<button class="cl_button_add" id="button_add"><span>+</span></button>
          </div>
       </main>
 
         <script src="js/vendor/jquery-2.1.0.min.js"></script>
-
+        <script src="angular/angular.js"></script>
         <script src="js/helper.js"></script>
         <script src="js/main.js"></script>
 
